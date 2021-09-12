@@ -18,6 +18,7 @@ export class UserController {
 
   @Delete('/:userId')
   async deleteUser(@Param('userId') userId: string) {
+    console.log('userId: ', userId);
     await this.usersService.deleteUser(userId);
   }
 
