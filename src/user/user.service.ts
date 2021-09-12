@@ -26,6 +26,8 @@ export class UsersService {
   async deleteUser(id: string): Promise<void> {
     try {
       await this.usersRepository.delete(id);
-    } catch (error) {}
+    } catch (error) {
+      console.log('error: ', error);
+    }
   }
 }
