@@ -22,13 +22,9 @@ module.exports = {
   username: getValue('POSTGRES_USER'),
   password: getValue('POSTGRES_PASSWORD'),
   database: getValue('POSTGRES_DATABASE'),
-
   entities: ['dist/**/*.entity.js'],
-
-  migrationsTableName: 'migration',
-
   migrations: ['dist/migration/*.js'],
-
+  migrationsRun: true,
   cli: {
     migrationsDir: 'src/migration',
   },
